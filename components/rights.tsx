@@ -7,7 +7,11 @@ export default function Rights() {
       <p className="text-xs md:text-sm font-light text-neutral-500">
         Ochrana osobních údajů je pro nás prioritou, <br />
         Více informací, jak zacházíme s vašimi daty, najdete v{" "}
-        <Link className="underline text-red-400" href="#">
+        <Link
+          aria-label="Odkaz na zpracování osobních údajů"
+          className="underline text-red-400"
+          href="#"
+        >
           tomto dokomentu.
         </Link>
       </p>

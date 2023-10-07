@@ -12,7 +12,13 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="flex items-center flex-col p-4 md:p-16 content-center ">
             <div className="">
-              <Image src="/title.png" alt="" width={500} height={200} />
+              <Image
+                aria-label="Oslavte s námi naše 15. narozeniny!"
+                src="/title.png"
+                alt=""
+                width={500}
+                height={200}
+              />
               {/*<Image src="/title.png" alt="" width={250} height={200} />*/}
             </div>
             <div className="flex flex-col gap-2">

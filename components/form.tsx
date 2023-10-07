@@ -49,6 +49,7 @@ export default function Form() {
             strokeWidth="1.5"
             stroke=""
             className="absolute stroke-neutral-300 left-2 w-6 h-6"
+            role="img"
           >
             <path
               strokeLinecap="round"
@@ -60,6 +61,7 @@ export default function Form() {
             type="text"
             className="p-3 border pl-10 ring-0 outline-none placeholder:text-neutral-300"
             placeholder="vas@email.cz"
+            aria-label="Váš email"
             onChange={(e) => {
               setEmail(e.target.value);
             }}
@@ -68,6 +70,8 @@ export default function Form() {
       </div>
       {emailStatus && (
         <p
+          role="status"
+          aria-live="polite"
           className={`text-sm font-light ${
             error ? "text-red-500" : "text-neutral-500"
           }`}
