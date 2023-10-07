@@ -10,7 +10,7 @@ export default function Code() {
   }, []);
 
   return (
-    <div className="flex items-center">
+    <section className="flex items-center">
       <div className=" w-2/5 md:w-1/3 px-3 md:px-0">
         <p className="text-neutral-500 text-base md:text-lg tracking-tight font-light">
           Váš dárkový kód je
@@ -19,6 +19,6 @@ export default function Code() {
       <div className="p-2 md:p-3 border w-1/2 text-center">
         <p className="font-bold ">{code}</p>
       </div>
-    </div>
+    </section>
   );
 }
