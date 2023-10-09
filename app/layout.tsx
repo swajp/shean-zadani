@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://shean-zadani.vercel.app"),
   title: "SHEAN - Narozeniny",
   description:
     "Slavíme 15. let! Vyzvedněte si od nás dárek, který vám vykouzlí úsměv na tváři. Po zadání emailu se vám ozveme a domluvíme se společně, jak váš dárek budete chtít využít.",
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
         alt: "SHEAN - Narozeniny. Slavíme 15. let! Vyzvedněte si od nás dárek, který vám vykouzlí úsměv na tváři. Po zadání emailu se vám ozveme a domluvíme se společně, jak váš dárek budete chtít využít.",
       },
     ],
-    locale: "en_US",
+    locale: "cs_CZ",
     type: "website",
   },
 };
