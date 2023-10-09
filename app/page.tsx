@@ -6,8 +6,25 @@ import Rights from "@/components/rights";
 import Image from "next/image";
 
 export default function Home() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "SHEAN - Narozeniny",
+    image: "/example.jpg",
+    description:
+      "SHEAN - Narozeniny. Slavíme 15. let! Vyzvedněte si od nás dárek, který vám vykouzlí úsměv na tváři. Po zadání emailu se vám ozveme a domluvíme se společně, jak váš dárek budete chtít využít.",
+    url: "https://shean-zadani.vercel.app/",
+    sameAs: [
+      "https://www.instagram.com/shean_stories/",
+      "https://www.linkedin.com/company/shean-s.r.o./",
+    ],
+  };
   return (
     <main className="p-2 md:p-8 max-w-screen-xl mx-auto h-screen flex items-center ">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section className="border-2 md:border-4  rounded-xl md:rounded-[2.3rem] border-[#F7F7F7] ">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <section className="flex items-center flex-col p-4 md:p-16 content-center ">
