@@ -4,6 +4,20 @@ import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "SHEAN - Narozeniny",
+  image: "/example.jpg",
+  description:
+    "SHEAN - Narozeniny. Slavíme 15. let! Vyzvedněte si od nás dárek, který vám vykouzlí úsměv na tváři. Po zadání emailu se vám ozveme a domluvíme se společně, jak váš dárek budete chtít využít.",
+  url: "https://shean-zadani.vercel.app/",
+  sameAs: [
+    "https://www.instagram.com/shean_stories/",
+    "https://www.linkedin.com/company/shean-s.r.o./",
+  ],
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://shean-zadani.vercel.app"),
   title: "SHEAN - Narozeniny",
@@ -40,7 +54,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
